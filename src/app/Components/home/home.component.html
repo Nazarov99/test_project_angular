@@ -1,0 +1,67 @@
+<div class="home-content">
+  <div class="left">
+    <span class="title">Таблица контактов</span>
+  </div>
+  <div class="right">
+    <button type="button" class="log-out-btn" (click)="logout()">
+      <i class="fas fa-sign-out-alt"></i>
+    </button>
+  </div>
+</div>
+
+<section class="content">
+  <div class="add-product">
+    <div class="search">
+      <input type="text" class="form-control" (change)="onSearch()" [(ngModel)]="filterParams.name">
+      <div class="icon" (click)="onSearch()">
+        <mat-icon>search</mat-icon>
+      </div>
+    </div>
+    <button type="button" (click)="addContact()"><mat-icon>add_circle_outline</mat-icon> Дабавить</button>
+  </div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col" width="18px">#</th>
+      <th scope="col">Названия</th>
+      <th scope="col">Email</th>
+      <th scope="col">Действия</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of users; index as i">
+      <td scope="row">{{ i + 1 }}</td>
+      <td scope="row">{{item.name}}</td>
+      <td scope="row">{{item.email}}</td>
+      <td scope="row" style="display: flex;align-items: center;">
+        <button type="button" class="action-btn" (click)="editContact(item)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button type="button" class="action-btn" (click)="deleteContact(item.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="product-pagination">
+    <div class="product-pagination__left">
+    </div>
+    <div class="product-pagination__right">
+      <ngb-pagination
+        (pageChange)="onTableDataChange($event)"
+        [page]="current_page"
+        [pageSize]="per_page"
+        [maxSize]="4"
+        [collectionSize]="total"
+        [rotate]="true"
+        [boundaryLinks]="true">
+      </ngb-pagination>
+    </div>
+  </div>
+</section>
+
+<div class="request-indicator" *ngIf="loader">
+  <mat-spinner></mat-spinner>
+</div>
+

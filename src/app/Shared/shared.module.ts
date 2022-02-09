@@ -1,0 +1,38 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatDialogModule} from "@angular/material/dialog";
+import {RouterModule} from "@angular/router";
+import {MatSelectModule} from "@angular/material/select";
+import { AddUserComponent } from './add-user/add-user.component';
+
+
+@NgModule({
+  declarations: [
+    AddUserComponent
+  ],
+  entryComponents: [
+    AddUserComponent
+  ],
+  exports: [
+
+  ],
+  imports: [
+    CommonModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    RouterModule,
+    MatSelectModule,
+  ]
+})
+export class SharedModule { }

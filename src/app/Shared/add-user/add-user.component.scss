@@ -1,0 +1,57 @@
+@import "../../Scss/variables";
+@import "../../Scss/mixins";
+
+.add-operator{
+
+  .head{
+    display: flex;
+    justify-content: space-between;
+
+    h1{
+      font-size: 20px;
+      font-weight: 500;
+      margin: 0;
+      @include Rubik;
+    }
+    button{
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  .body{
+    margin-top: 20px;
+
+    .col-cat2{
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  .btn-container{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.space-grey.mat-select-panel {
+  background: rgba(101,115,126, 0.5);
+}
+
+.mat-select {
+  border: solid 1px rgba(101,115,126, 0.5);
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+
+::ng-deep{
+  .mat-form-field-underline {
+    display: none;
+  }
+  .col-cat1, .col-cat2{
+    .mat-form-field-label-wrapper{
+      top: 5px;
+      left: 10px!important;
+    }
+  }
+}
+

@@ -1,0 +1,34 @@
+<div class="login-form">
+  <form [formGroup]="form" (ngSubmit)="login()">
+    <div class="content">
+      <div class="icon">
+        <img src="assets/icon/logo-qr-code.png" alt="">
+      </div>
+      <div class="input-group">
+        <div class="input">
+          <input type="text" placeholder="Логин" formControlName="email">
+          <div class="icon-input">
+            <img src="assets/icon/user.svg" alt="">
+          </div>
+          <span class="error" *ngIf="isSubmitted && form.controls.email.invalid">Введите логин</span>
+        </div>
+        <div class="input">
+          <input type="password" placeholder="Пароль" formControlName="password">
+          <div class="icon-input">
+            <img src="assets/icon/lock.svg" alt="">
+          </div>
+          <span class="error" *ngIf="isSubmitted && form.controls.password.invalid">Введите пароль</span>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button type="button" (click)="login()">Вход</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="request-indicator" *ngIf="loader">
+  <mat-spinner></mat-spinner>
+</div>
+
+

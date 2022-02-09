@@ -1,0 +1,131 @@
+.cdk-overlay-container {
+  z-index: 10000;
+}
+
+.common-dialog-backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.common-dialog-panel {
+  mat-dialog-container {
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+.common-dialog-transparent-panel {
+  mat-dialog-container {
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+    background: none;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+.common-dialog {
+  display: flex;
+  flex-direction: column;
+
+  .dialog-header {
+    display: flex;
+    min-height: 70px;
+    max-height: 70px;
+    margin: 0;
+    position: relative;
+  }
+
+  .dialog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 70px;
+
+    .dialog-close-btn {
+      outline: none;
+      width: 30px;
+      height: 50px;
+      background-color: #F2F2F2;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      text-align: center;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: column;
+
+      .icon {
+        width: 12px;
+        height: 12px;
+        margin-bottom: 8px;
+      }
+    }
+
+    &.green-separator {
+      &::before {
+        background: #227391;
+      }
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 50px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      left: 0;
+      top: 10px;
+      position: absolute;
+    }
+
+    .left-item {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        margin-right: 14px;
+      }
+
+      .title {
+        font-family: "Rubik", sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1;
+        text-align: left;
+        color: #e1e1e1;
+      }
+    }
+
+    .right-item {
+      display: flex;
+      align-items: center;
+
+      .order-number {
+        font-family: "Rubik", sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1;
+        text-align: right;
+        color: #f2f2f2;
+
+        .number {
+          color: #8dc712;
+        }
+      }
+    }
+  }
+
+  .dialog-content {
+    padding: 20px;
+    margin: 0;
+  }
+}

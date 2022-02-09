@@ -1,0 +1,191 @@
+@import "../../Scss/variables";
+@import "../../Scss/mixins";
+
+.home-content{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+
+  .left{
+
+    .title {
+      font-family: "Rubik", sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1;
+      text-align: left;
+      color: #227192;
+      margin: 0;
+    }
+  }
+  .right{
+
+    .log-out-btn {
+      width: 54px;
+      height: 54px;
+      border-radius: 10px;
+      position: unset;
+      background-color: transparent;
+      border: 1px solid $blue-brand;
+
+      i {
+        font-size: 21px;
+        color: $blue-brand;
+      }
+    }
+  }
+}
+
+.content{
+  padding: 20px;
+
+  .action-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  .add-product{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 0 20px 0;
+
+    .search{
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      position: relative;
+      cursor: pointer;
+
+      .icon{
+        position: absolute;
+        right: 7px;
+        top: 7px;
+      }
+
+      input{
+        width: 100%;
+      }
+    }
+
+    button{
+      align-items: center;
+      display: flex;
+      background-color: #247493;
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: none;
+      color: $white;
+
+      mat-icon{
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .product-pagination{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 30px 0;
+
+    &__left{
+
+      button{
+        background-color: $white;
+        color: rgb(108, 108, 108);
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        min-width: 188px;
+        font-weight: 500;
+        padding: 15px 15px;
+        border-radius: 8px;
+        border: 1px solid rgb(237, 241, 241);
+        @include Rubik;
+
+        &:hover{
+          background-color: #edf1f1;
+        }
+      }
+    }
+    &__right{
+
+    }
+  }
+
+}
+
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: $black;
+}
+
+
+::ng-deep{
+
+  ngb-pagination{
+
+    .pagination{
+      .page-item.active .page-link{
+        background-color: #edf1f1;
+        border-color: transparent;
+      }
+      .page-item{
+
+        .page-link{
+          background-color: $white;
+          color: rgb(34, 34, 34);
+          font-size: 16px;
+          line-height: 28px;
+          font-weight: 500;
+          border-radius: 8px;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          -webkit-box-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          justify-content: center;
+          cursor: pointer;
+          margin: 0 5px;
+          outline: 0;
+          font-family: 'Rubik', sans-serif;
+          border: none;
+
+          &:hover{
+            background-color: #edf1f1;
+          }
+
+          &:focus{
+            box-shadow: none !important;
+            border-color: transparent !important;
+          }
+        }
+
+        &:nth-child(1){
+          display: none;
+        }
+        &:nth-child(2){
+          display: none;
+        }
+        &:nth-last-child(1){
+          display: none;
+        }
+        &:nth-last-child(2){
+          display: none;
+        }
+      }
+
+    }
+  }
+
+}
+
