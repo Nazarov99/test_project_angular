@@ -4,9 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://127.0.0.1:8000/api',
-  imageUrl: 'http://127.0.0.1:8000/',
-  apiUrlV1: 'http://127.0.0.1:8000/',
+  apiUrlV1: 'http://o9273360.beget.tech/public/',
+  apiUrl: 'http://o9273360.beget.tech/public/api',
 };
 
 /*

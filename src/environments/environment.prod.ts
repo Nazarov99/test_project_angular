@@ -1,6 +1,5 @@
 export const environment = {
   production: true,
-  apiUrlV1: 'http://wweafz8g.beget.tech/public/',
-  imageUrl: 'http://wweafz8g.beget.tech/public/',
-  apiUrl: 'http://wweafz8g.beget.tech/public/api',
+  apiUrlV1: 'http://o9273360.beget.tech/public/',
+  apiUrl: 'http://o9273360.beget.tech/public/api',
 };
